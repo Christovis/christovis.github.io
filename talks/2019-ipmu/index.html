@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en" class="dark light">
+
+    <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="base" content="https:&#x2F;&#x2F;christovis.github.io&#x2F;" />
+
+    
+
+    
+
+    
+    
+    
+        <title>
+            
+                Measuring H_0 with strong lenses
+            
+        </title>
+
+        
+            <meta property="og:title"
+                  content="Measuring H_0 with strong lenses" />
+        
+    
+
+    
+        
+            <meta property="og:description" content="This is an example description" />
+        
+    
+
+    
+        
+            <meta name="description" content="This is an example description" />
+        
+    
+
+    
+    
+        <link rel="icon"
+              type="image/png"
+              href="https://christovis.github.io/static/icons/favicon.ico" />
+    
+
+    
+    
+        <link href=https://christovis.github.io/fonts.css rel="stylesheet" />
+    
+
+    
+    
+        <link rel="stylesheet"
+              type="text/css"
+              href="/syntax-theme-dark.css"
+              media="(prefers-color-scheme: dark)" />
+        <link rel="stylesheet"
+              type="text/css"
+              href="/syntax-theme-light.css"
+              media="(prefers-color-scheme: light)" />
+    
+
+    
+    
+
+    
+    
+        <script defer src=https://christovis.github.io/js/codeblock.js></script>
+    
+
+    
+    
+
+    
+    
+
+    
+        
+            <script>
+                MathJax = {
+                    tex: {
+                        inlineMath: [
+                            ['$', '$'],
+                            ['\\(', '\\)']
+                        ]
+                    }
+                };
+            </script>
+        
+        <script type="text/javascript" id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+        </script>
+    
+
+    
+    
+
+
+    
+    
+        <link rel="stylesheet"
+              type="text/css"
+              href="https://christovis.github.io/theme/light.css" />
+        <link id="darkModeStyle"
+              rel="stylesheet"
+              type="text/css"
+              href="https://christovis.github.io/theme/dark.css" />
+    
+
+    <!-- Set the correct theme in the script -->
+
+    
+        <script src=https://christovis.github.io/js/themetoggle.js></script>
+
+        
+            <script>
+                setTheme(getSavedTheme());
+            </script>
+        
+    
+
+
+    <link rel="stylesheet"
+          type="text/css"
+          media="screen"
+          href="https://christovis.github.io/main.css" />
+
+    
+
+    </head>
+
+
+    <body>
+        <div class="left-content">
+            
+            
+        </div>
+
+        <div class="content">
+            <nav>
+    <div class="left-nav">
+        
+            <a href=https:&#x2F;&#x2F;christovis.github.io&#x2F;>#CB</a>
+        
+
+
+        <div class="socials">
+            
+                
+            
+            
+                <a rel=&#x27;me&#x27; href="https:&#x2F;&#x2F;github.com&#x2F;Christovis" class="social">
+                    <img alt="github"
+                         src="https://christovis.github.io/icons/social/github.svg" />
+                </a>
+            
+                <a rel=&#x27;me&#x27; href="https:&#x2F;&#x2F;mastodon.green&#x2F;@chrbecker@eupolicy.social" class="social">
+                    <img alt="mastodon"
+                         src="https://christovis.github.io/icons/social/mastodon.svg" />
+                </a>
+            
+                <a rel=&#x27;me&#x27; href="https:&#x2F;&#x2F;pixelfed.social&#x2F;i&#x2F;web&#x2F;profile&#x2F;789250781975312794" class="social">
+                    <img alt="pixelfed"
+                         src="https://christovis.github.io/icons/social/pixelfed.svg" />
+                </a>
+            
+        </div>
+    </div>
+
+    <div class="right-nav">
+        
+            <a href=https://christovis.github.io/software style="margin-right: 0.5em">&#x2F;software</a>
+        
+            <a href=https://christovis.github.io/talks style="margin-right: 0.5em">&#x2F;talks</a>
+        
+            <a href=https://christovis.github.io/posts style="margin-right: 0.5em">&#x2F;posts</a>
+        
+
+        
+
+        
+            <a id="dark-mode-toggle"
+               onclick="toggleTheme(); event.preventDefault();"
+               href="#">
+                <img src="https://christovis.github.io/icons/sun.svg" id="sun-icon" alt="Light" />
+                <img src="https://christovis.github.io/icons/moon.svg"
+                     id="moon-icon"
+                     style="filter: invert(1)"
+                     alt="Dark" />
+                <img src="https://christovis.github.io/icons/auto.svg"
+                     id="auto-icon"
+                     style="filter: invert(1)"
+                     alt="Auto" />
+            </a>
+
+            <!-- Initialize the theme toggle icons -->
+            <script>
+                updateItemToggleTheme()
+            </script>
+        
+    </div>
+</nav>
+
+
+            
+            
+    
+    <div class="visible-element-observer-root" data-selector="main article p">
+        <main>
+            <article>
+                <div class="title">
+                    
+                    
+    
+        <div class="page-header">
+            Measuring H_0 with strong lenses
+        </div>
+    
+
+
+                    <div class="meta">
+                        
+                            Posted on <time>2019-07-20</time>
+                        
+
+
+                        
+
+                        
+
+                        
+
+                        
+                        
+
+                        
+                        
+
+                        
+                        
+
+                        
+
+                    </div>
+                </div>
+
+                
+
+                <section class="body">
+                    <p>$$H_0$$ is one of the critical cosmological parameters, but recently a mismatch of the measured $$H_0$$ between distant universe (Planck) and the local universe (GAIA) has been found. Therefore, additional independent approaches for measuring H0 are required to understand the problem. Strong lensing systems with multiple lensed various objects provide a unique way to measure H0, but the line-of-sight effects due to seconadry lenses on the constraint of $$H_0$$ needs to be understood, especially in the era of LSST, which will reveal thousands of strong lensed various objects. In this talk, I present some results by adopting semi-analytic light-cones based the Out Rim Simulation to implement multiple lens plane ray-tracing simulations, of 1000 double and 400 quadruple lensing systems for the scenarious with and without line-of-sight halos.</p>
+
+                </section>
+            </article>
+        </main>
+    </div>
+
+
+
+            
+                
+            
+
+            
+        </div>
+
+        <div class="right-content">
+            
+    
+    
+
+        </div>
+    </body>
+
+</html>

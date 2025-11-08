@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en" class="dark light">
+
+    <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="base" content="https:&#x2F;&#x2F;christovis.github.io&#x2F;" />
+
+    
+
+    
+
+    
+    
+    
+        <title>
+            
+                The State of Data-Driven Reasoning - Part I
+            
+        </title>
+
+        
+            <meta property="og:title"
+                  content="The State of Data-Driven Reasoning - Part I" />
+        
+    
+
+    
+        
+            <meta property="og:description" content="This is an example description" />
+        
+    
+
+    
+        
+            <meta name="description" content="This is an example description" />
+        
+    
+
+    
+    
+        <link rel="icon"
+              type="image/png"
+              href="https://christovis.github.io/static/icons/favicon.ico" />
+    
+
+    
+    
+        <link href=https://christovis.github.io/fonts.css rel="stylesheet" />
+    
+
+    
+    
+        <link rel="stylesheet"
+              type="text/css"
+              href="/syntax-theme-dark.css"
+              media="(prefers-color-scheme: dark)" />
+        <link rel="stylesheet"
+              type="text/css"
+              href="/syntax-theme-light.css"
+              media="(prefers-color-scheme: light)" />
+    
+
+    
+    
+
+    
+    
+        <script defer src=https://christovis.github.io/js/codeblock.js></script>
+    
+
+    
+    
+
+    
+    
+
+    
+        
+            <script>
+                MathJax = {
+                    tex: {
+                        inlineMath: [
+                            ['$', '$'],
+                            ['\\(', '\\)']
+                        ]
+                    }
+                };
+            </script>
+        
+        <script type="text/javascript" id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+        </script>
+    
+
+    
+    
+
+
+    
+    
+        <link rel="stylesheet"
+              type="text/css"
+              href="https://christovis.github.io/theme/light.css" />
+        <link id="darkModeStyle"
+              rel="stylesheet"
+              type="text/css"
+              href="https://christovis.github.io/theme/dark.css" />
+    
+
+    <!-- Set the correct theme in the script -->
+
+    
+        <script src=https://christovis.github.io/js/themetoggle.js></script>
+
+        
+            <script>
+                setTheme(getSavedTheme());
+            </script>
+        
+    
+
+
+    <link rel="stylesheet"
+          type="text/css"
+          media="screen"
+          href="https://christovis.github.io/main.css" />
+
+    
+
+    </head>
+
+
+    <body>
+        <div class="left-content">
+            
+            
+        </div>
+
+        <div class="content">
+            <nav>
+    <div class="left-nav">
+        
+            <a href=https:&#x2F;&#x2F;christovis.github.io&#x2F;>#CB</a>
+        
+
+
+        <div class="socials">
+            
+                
+            
+            
+                <a rel=&#x27;me&#x27; href="https:&#x2F;&#x2F;github.com&#x2F;Christovis" class="social">
+                    <img alt="github"
+                         src="https://christovis.github.io/icons/social/github.svg" />
+                </a>
+            
+                <a rel=&#x27;me&#x27; href="https:&#x2F;&#x2F;mastodon.green&#x2F;@chrbecker@eupolicy.social" class="social">
+                    <img alt="mastodon"
+                         src="https://christovis.github.io/icons/social/mastodon.svg" />
+                </a>
+            
+                <a rel=&#x27;me&#x27; href="https:&#x2F;&#x2F;pixelfed.social&#x2F;i&#x2F;web&#x2F;profile&#x2F;789250781975312794" class="social">
+                    <img alt="pixelfed"
+                         src="https://christovis.github.io/icons/social/pixelfed.svg" />
+                </a>
+            
+        </div>
+    </div>
+
+    <div class="right-nav">
+        
+            <a href=https://christovis.github.io/software style="margin-right: 0.5em">&#x2F;software</a>
+        
+            <a href=https://christovis.github.io/talks style="margin-right: 0.5em">&#x2F;talks</a>
+        
+            <a href=https://christovis.github.io/posts style="margin-right: 0.5em">&#x2F;posts</a>
+        
+
+        
+
+        
+            <a id="dark-mode-toggle"
+               onclick="toggleTheme(); event.preventDefault();"
+               href="#">
+                <img src="https://christovis.github.io/icons/sun.svg" id="sun-icon" alt="Light" />
+                <img src="https://christovis.github.io/icons/moon.svg"
+                     id="moon-icon"
+                     style="filter: invert(1)"
+                     alt="Dark" />
+                <img src="https://christovis.github.io/icons/auto.svg"
+                     id="auto-icon"
+                     style="filter: invert(1)"
+                     alt="Auto" />
+            </a>
+
+            <!-- Initialize the theme toggle icons -->
+            <script>
+                updateItemToggleTheme()
+            </script>
+        
+    </div>
+</nav>
+
+
+            
+            
+    
+    <div class="visible-element-observer-root" data-selector="main article p">
+        <main>
+            <article>
+                <div class="title">
+                    
+                    
+    
+        <div class="page-header">
+            The State of Data-Driven Reasoning - Part I
+        </div>
+    
+
+
+                    <div class="meta">
+                        
+                            Posted on <time>2020-09-20</time>
+                        
+
+
+                        
+
+                        
+
+                        
+
+                        
+                        
+
+                        
+                        
+
+                        
+                        
+
+                        
+
+                    </div>
+                </div>
+
+                
+
+                <section class="body">
+                    <blockquote>
+<p>This is part of a series in which I explore the current narrative around data-driven reasoning in social applications.</p>
+</blockquote>
+<p>Governance, especially in a state of emergency, has immensely improved since numbers, indicators, categorisations, and comparisons have been utilised in the second cholera pandemic in the first half of the nineteenth-century <a href="https://christovis.github.io/posts/blog-the-state-of-parti/#1">[1]</a>. Quantification gives a basis on which change can be understood, risk calculated, and actions defined. Since then, the reliance on data-driven reasoning has intensified through two important events. Firstly, neoliberal policies of the '80s have completed the dismantling of public and private monopolies over telecommunications networks and digital technologies <a href="https://christovis.github.io/posts/blog-the-state-of-parti/#2">[2]</a>. It permitted corporate interests to control the narrative about data-driven reasoning. Secondly, the breakthroughs in machine intelligence in the 90's exemplified by the victory of Deep Blue winning against Garry Kasparov. These events have transformed data into the new oil of the digital economy which is sold through the impression of a "speedy, accessible, revealing, panoramic, prophetic, smart, specific, side-effects-free" algorithm (<a href="https://christovis.github.io/posts/blog-the-state-of-parti/#3">[3]</a>, <a href="https://christovis.github.io/posts/blog-the-state-of-parti/#4">[4]</a>). Today, the PWC 2020 <a href="https://www.pwc.es/es/auditoria/assets/global-top-100-companies-2020.pdf">report</a> shows that those organisations form the largest sector in global market capitalisation. Like no other occupation, data scientists define "the pathway to the future" and thus "they must take a leading part in [ensuring] that the new world [...] is a good sort of a place in which to live" as was written in the MIT Technology Review of January 1932.</p>
+<p>While recent innovations have indeed led to some societal benefits, they have also demonstrated their potential to be abused or misused in ways their designers could not have imagined <a href="https://christovis.github.io/posts/blog-the-state-of-parti/#5">[5]</a>. To understand how this was made possible, it is essential to understand the environment in which data-driven solutions are designed. The organisational culture in which they were developed is strikingly homogeneous in social and political positions, marked by a lack of diversity and unwillingness to embrace pluralism (<a href="https://christovis.github.io/posts/blog-the-state-of-parti/#6">[6]</a>, <a href="https://christovis.github.io/posts/blog-the-state-of-parti/#7">[7]</a>, <a href="https://christovis.github.io/posts/blog-the-state-of-parti/#8">[8]</a>). This culture has been found to navigate rather than resolve the ethical minefield that a business model of informational capitalism faces <a href="https://christovis.github.io/posts/blog-the-state-of-parti/#9">[9]</a>. As there are no guardrails, it is upon the companies themselves to determine what is good or right. This is examplified by the operation in "the trenches of an International Organisation or NGO" <a href="https://christovis.github.io/posts/blog-the-state-of-parti/#10">[10]</a>. As the anonymous describes how donors expect them to pivot "as muchof our work as possible to the Covid-19 response[,] responsible data practices are as theoretical as ever[,] without guardrails." The anonymous concludes that the "only way we will ever get better at this, is if somebody makes us." Until data driven institutions stop being the owner of ethics, they will continue to define and bend them, creating side-effects that will enter the public discourse through the media, just as the scandals around Facebook and Google's DeepMind did (<a href="https://christovis.github.io/posts/blog-the-state-of-parti/#11">[11]</a>, <a href="https://christovis.github.io/posts/blog-the-state-of-parti/#12">[12]</a>, <a href="https://christovis.github.io/posts/blog-the-state-of-parti/#13">[13]</a>, <a href="https://christovis.github.io/posts/blog-the-state-of-parti/#14">[14]</a>).</p>
+<h3 id="references"><a class="zola-anchor" href="#references" aria-label="Anchor link for: references">References</a></h3>
+<p><a id="1">[1]</a>
+Schweber, Libby (2006).
+Disciplining Statistics: Demography and Vital Statistics in France and England, 1830–1885.
+Duke University Press.</p>
+<p><a id="2">[2]</a>
+Treguer, Felix (2019).
+Data Politics: Worlds, Subjects, Rights.
+Chapter: Seeing Like Big Tech: Security Assemblages, Technology, and the Future of State Bureaucracy.
+Routledge.</p>
+<p><a id="3">[3]</a>
+Valverde, Mariana and Mopas, Michael (2004).
+Global governmentality: Governing international spaces.
+Chapter: Insecurity and the dream of targeted governance.
+Routledge.</p>
+<p><a id="4">[4]</a>
+Beer, David (2018).
+The Data Gaze: Capitalism, power and perception.
+Sage.</p>
+<p><a id="5">[5]</a>
+O'Neil, Cathy (2016).
+Weapons of Math Destruction: How Big Data Increases Inequality and Threatens Democracy.
+Penguin Books.</p>
+<p><a id="6">[6]</a>
+Moss, Emanuel and Metcalf, Jacob (2020)
+Ethics Owners: A New Model of Organizational Responsibility in Data-Driven Technology Companies.
+Data &amp; Society Research Institute.</p>
+<p><a id="7">[7]</a>
+Crawford, Kate et al. (2019).
+AI now 2019 report.</p>
+<p><a id="8">[8]</a>
+Cook, Katy (2020).
+The Psychology of Silicon Valley: Ethical Threats and Emotional Unintelligence in the Tech Industry.
+Palgrave Macmillan.</p>
+<p><a id="9">[9]</a>
+Zuboff, Shoshana (2019).
+The Age of Surveillance Capitalism: The Fight for a Human Future at the New Frontier of Power.
+Profile Books.</p>
+<p><a id="10">[10]</a>
+Anonymous (2020).
+Data Justice and Covid-19: Global Perspectives.
+Chapter: Reining in Humanitarian Technology.
+Meatspace Press.</p>
+<p><a id="11">[11]</a>
+Powles, Julia and Hodson, Hal H. (2017).
+Google DeepMind and healthcare in an age of algorithms.
+Health and Technology.</p>
+<p><a id="12">[12]</a>
+Wagner, Ben (2018).
+Being Profiled: Cogitas Ergo Sum.
+Chapter: Ethics as an Escape from Regulation: From “ethics-Washing” to Ethics-Shopping?’
+Amsterdam University Press.</p>
+<p><a id="13">[13]</a>
+Taylor, Linnet and Dencik, Lina (2020).
+Constructing Commercial Data Ethics.
+Technology and Regulation.</p>
+<p><a id="14">[14]</a>
+Doctorow, Cory (2020)
+<a href="https://www.wired.com/story/facebook-is-going-after-its-critics-in-the-name-of-privacy/">Facebook Is Going After Its Critics in the Name of Privacy</a>.
+Wired.
+Accessed: 21.11.2020</p>
+
+                </section>
+            </article>
+        </main>
+    </div>
+
+
+
+            
+                
+            
+
+            
+        </div>
+
+        <div class="right-content">
+            
+    
+    
+
+        </div>
+    </body>
+
+</html>

@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en" class="dark light">
+
+    <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="base" content="https:&#x2F;&#x2F;christovis.github.io&#x2F;" />
+
+    
+
+    
+
+    
+    
+    
+        <title>
+            
+                Durham Research Methods Conversations - Machine Learning
+            
+        </title>
+
+        
+            <meta property="og:title"
+                  content="Durham Research Methods Conversations - Machine Learning" />
+        
+    
+
+    
+        
+            <meta property="og:description" content="This is an example description" />
+        
+    
+
+    
+        
+            <meta name="description" content="This is an example description" />
+        
+    
+
+    
+    
+        <link rel="icon"
+              type="image/png"
+              href="https://christovis.github.io/static/icons/favicon.ico" />
+    
+
+    
+    
+        <link href=https://christovis.github.io/fonts.css rel="stylesheet" />
+    
+
+    
+    
+        <link rel="stylesheet"
+              type="text/css"
+              href="/syntax-theme-dark.css"
+              media="(prefers-color-scheme: dark)" />
+        <link rel="stylesheet"
+              type="text/css"
+              href="/syntax-theme-light.css"
+              media="(prefers-color-scheme: light)" />
+    
+
+    
+    
+
+    
+    
+        <script defer src=https://christovis.github.io/js/codeblock.js></script>
+    
+
+    
+    
+
+    
+    
+
+    
+        
+            <script>
+                MathJax = {
+                    tex: {
+                        inlineMath: [
+                            ['$', '$'],
+                            ['\\(', '\\)']
+                        ]
+                    }
+                };
+            </script>
+        
+        <script type="text/javascript" id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+        </script>
+    
+
+    
+    
+
+
+    
+    
+        <link rel="stylesheet"
+              type="text/css"
+              href="https://christovis.github.io/theme/light.css" />
+        <link id="darkModeStyle"
+              rel="stylesheet"
+              type="text/css"
+              href="https://christovis.github.io/theme/dark.css" />
+    
+
+    <!-- Set the correct theme in the script -->
+
+    
+        <script src=https://christovis.github.io/js/themetoggle.js></script>
+
+        
+            <script>
+                setTheme(getSavedTheme());
+            </script>
+        
+    
+
+
+    <link rel="stylesheet"
+          type="text/css"
+          media="screen"
+          href="https://christovis.github.io/main.css" />
+
+    
+
+    </head>
+
+
+    <body>
+        <div class="left-content">
+            
+            
+        </div>
+
+        <div class="content">
+            <nav>
+    <div class="left-nav">
+        
+            <a href=https:&#x2F;&#x2F;christovis.github.io&#x2F;>#CB</a>
+        
+
+
+        <div class="socials">
+            
+                
+            
+            
+                <a rel=&#x27;me&#x27; href="https:&#x2F;&#x2F;github.com&#x2F;Christovis" class="social">
+                    <img alt="github"
+                         src="https://christovis.github.io/icons/social/github.svg" />
+                </a>
+            
+                <a rel=&#x27;me&#x27; href="https:&#x2F;&#x2F;mastodon.green&#x2F;@chrbecker@eupolicy.social" class="social">
+                    <img alt="mastodon"
+                         src="https://christovis.github.io/icons/social/mastodon.svg" />
+                </a>
+            
+                <a rel=&#x27;me&#x27; href="https:&#x2F;&#x2F;pixelfed.social&#x2F;i&#x2F;web&#x2F;profile&#x2F;789250781975312794" class="social">
+                    <img alt="pixelfed"
+                         src="https://christovis.github.io/icons/social/pixelfed.svg" />
+                </a>
+            
+        </div>
+    </div>
+
+    <div class="right-nav">
+        
+            <a href=https://christovis.github.io/software style="margin-right: 0.5em">&#x2F;software</a>
+        
+            <a href=https://christovis.github.io/talks style="margin-right: 0.5em">&#x2F;talks</a>
+        
+            <a href=https://christovis.github.io/posts style="margin-right: 0.5em">&#x2F;posts</a>
+        
+
+        
+
+        
+            <a id="dark-mode-toggle"
+               onclick="toggleTheme(); event.preventDefault();"
+               href="#">
+                <img src="https://christovis.github.io/icons/sun.svg" id="sun-icon" alt="Light" />
+                <img src="https://christovis.github.io/icons/moon.svg"
+                     id="moon-icon"
+                     style="filter: invert(1)"
+                     alt="Dark" />
+                <img src="https://christovis.github.io/icons/auto.svg"
+                     id="auto-icon"
+                     style="filter: invert(1)"
+                     alt="Auto" />
+            </a>
+
+            <!-- Initialize the theme toggle icons -->
+            <script>
+                updateItemToggleTheme()
+            </script>
+        
+    </div>
+</nav>
+
+
+            
+            
+    
+    <div class="visible-element-observer-root" data-selector="main article p">
+        <main>
+            <article>
+                <div class="title">
+                    
+                    
+    
+        <div class="page-header">
+            Durham Research Methods Conversations - Machine Learning
+        </div>
+    
+
+
+                    <div class="meta">
+                        
+                            Posted on <time>2020-11-25</time>
+                        
+
+
+                        
+
+                        
+
+                        
+
+                        
+                        
+
+                        
+                        
+
+                        
+                        
+
+                        
+
+                    </div>
+                </div>
+
+                
+
+                <section class="body">
+                    <blockquote>
+<p>This blog post is on a conversation I was steering for the <a href="https://duracuk-lb01-production.terminalfour.net/research/institutes-and-centres/research-methods/">Research Methods Conversations</a> and can also be found <a href="https://researchmethodsconversations.blogspot.com/2020/12/machine-learning.html">here</a>.</p>
+</blockquote>
+<p>Machine Learning (ML) has, in the last decade become something of a “<a href="https://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=1056774">scientific bandwagon</a>”. Starting as theoretical work in the departments of computer science and mathematics, it has since toured through most campus parts of universities, where its performances has led to new insights and breakthroughs on a wide range of topics, an aspect that was reflected by the broad range of participants backgrounds (Computer Science, Archaeology, Psychology, Physics to name but a few) in this week’s Research Methods Conversation, of which the focus was on how ML is and can be used by academics and the Universities management, and what ethical and methodological difficult could arise.</p>
+<p>The conversation started with mapping out how participants have used ML inspired algorithmic compositions to achieve advances in their field. A participant of the department of Psychology, explained how he is using reinforcement learning (an area of ML where models are trained to make decisions in an uncertain, complex environment) to simulate how the nervous system deals with uncertainty. This path of research holds much potential as connections between ML and the cognitive system have been established (e.g.  <a href="https://www.pnas.org/content/111/23/8619">Yamins, D.L.K. et al. 2014</a>). Another exciting project which was brought up a research in the department of Archaeology, and her collaboration with the  <a href="https://www.dur.ac.uk/idas/">Institute of Data Science</a>  to use ML to map soil types on aerial photography or satellite imagery. As some participants voiced their interest to learn more about ML, it was pointed out that the  <a href="https://www.blogger.com/#">Advanced Research Computing</a>  is offering a  <a href="https://www.blogger.com/#">training</a>  course.</p>
+<p>However, the “ML bandwagon” found bigger resonance outside of academia. As neoliberal policies from 80’s have completed the dismantling of public and private monopolies over digital technologies, data flows have profoundly intensified (<a href="https://www.routledge.com/Data-Politics-Worlds-Subjects-Rights/Bigo-Isin-Ruppert/p/book/9781138053267">Bigo, R., Isin, E., Ruppert E. 2017</a>). Shortly thereafter, research into ML has shifted in the 90’s from a knowledge- to a data-driven approach to reasoning, which led to Deep Blue winning against Garry Kasparov and transformed data into the new oil of the digital industry. This data dependency of ML has led the conversation overlap with themes touched upon in the previous meeting where ‘<a href="https://researchmethodsconversations.blogspot.com/2020/11/data-science-and-social-science-theory.html">Data Science and Social Science Theory</a>’ were discussed. An ML specific issue that was mentioned is that it can be tuned and tweaked to near-perfect  <a href="https://www.technologyreview.com/2020/11/12/1011944/artificial-intelligence-replication-crisis-science-big-tech-google-deepmind-facebook-openai/">performance in the lab</a>  often fail in real settings. This is typically put down to a mismatch between the data the ML model was trained and tested on and the data it encounters in the world, a problem known as  <em>data shift</em>. Now another issue, known as  <em>underspecification</em>  in statistics, has been brought to light by  <a href="https://www.technologyreview.com/2020/11/18/1012234/training-machine-learning-broken-real-world-heath-nlp-computer-vision/">Google</a>. In contrast to the data shift, underspecification describes a problem with the way that ML models are currently trained and tested. Thus the need for a “human in the loop” with expert knowledge was emphasized, while it was also realized that this human is an impossible figure when one considers the entanglement of the expert, algorithm, training and real-world data, as detailed in “<a href="https://www.dukeupress.edu/cloud-ethics">Cloud Ethics</a>” by  <a href="https://www.dur.ac.uk/geography/staff/geogstaffhidden/?id=2710">L. Amoore</a>  (2020).</p>
+<p>On this topic the important work of a researcher from the department of Computer Science, was mentioned. As ML models can be highly non-linear with a gazillion parameters, they form a  <em>black box</em>  that is impossible to understand. Their research focuses on finding tools that could turn a  <em>black</em>  into a  <em>white box</em>, which provide explanations of their decision in a human-understandable way. Achieving interpretability and transparency in turn are important to ensure algorithmic fairness and identify potential bias.</p>
+<p>However, ML models themselves are not the only bottleneck towards algorithmic accountability. The opaque, unverifiable and unchallengeable decision-making process of many currently deployed data flows and algorithms across consumer, business, and government sectors have led to coin the term  <a href="https://www.hup.harvard.edu/catalog.php?isbn=9780674970847"><em>black box society</em></a>. Many participants in the conversation could immediately think of ways how ML based algorithms could impact their professional lives. The widely reported case of  <a href="https://www.theguardian.com/technology/2018/oct/10/amazon-hiring-ai-gender-bias-recruiting-engine">Amazon’s automated hiring system</a>  has made the participants wonder how their knowledge thereof would alter the way they would present themselves, putting emphasize on buzzwords the algorithm could weigh positively.</p>
+<p>As Covid-19 had us move more of our lives into virtual spaces, Universities have opened new data flows to reach their now remote students, that in some cases are not far from  <a href="https://www.wired.co.uk/article/university-covid-learning-student-monitoring">surveillance technology</a>. In this context a participant noted the PhD project at Durham Law School which explores the ways in which surveillance can crop up in simulated classroom environments in India. Understanding how they are used and interpreted by students, teachers, and administrators is need if a legal framework is sought. Another participant pushed further and imagined use cases beyond the supporting human decision making but replacing it altogether. This would lead to the redundancy of labour which was imagined to impact especially the global South, as it is in the North where most of the computational power, data centres, and advances in learning algorithms reside.</p>
+
+                </section>
+            </article>
+        </main>
+    </div>
+
+
+
+            
+                
+            
+
+            
+        </div>
+
+        <div class="right-content">
+            
+    
+    
+
+        </div>
+    </body>
+
+</html>

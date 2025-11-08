@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en" class="dark light">
+
+    <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="base" content="https:&#x2F;&#x2F;christovis.github.io&#x2F;" />
+
+    
+
+    
+
+    
+    
+    
+        <title>
+            
+                Accelerating Cosmic Simulations through Machine Learning
+            
+        </title>
+
+        
+            <meta property="og:title"
+                  content="Accelerating Cosmic Simulations through Machine Learning" />
+        
+    
+
+    
+        
+            <meta property="og:description" content="A deep dive into security considerations when writing Rust applications, covering memory safety, dependency management, and common pitfalls." />
+        
+    
+
+    
+        
+            <meta name="description" content="A deep dive into security considerations when writing Rust applications, covering memory safety, dependency management, and common pitfalls." />
+        
+    
+
+    
+    
+        <link rel="icon"
+              type="image/png"
+              href="https://christovis.github.io/static/icons/favicon.ico" />
+    
+
+    
+    
+        <link href=https://christovis.github.io/fonts.css rel="stylesheet" />
+    
+
+    
+    
+        <link rel="stylesheet"
+              type="text/css"
+              href="/syntax-theme-dark.css"
+              media="(prefers-color-scheme: dark)" />
+        <link rel="stylesheet"
+              type="text/css"
+              href="/syntax-theme-light.css"
+              media="(prefers-color-scheme: light)" />
+    
+
+    
+    
+
+    
+    
+        <script defer src=https://christovis.github.io/js/codeblock.js></script>
+    
+
+    
+    
+
+    
+    
+
+    
+        
+            <script>
+                MathJax = {
+                    tex: {
+                        inlineMath: [
+                            ['$', '$'],
+                            ['\\(', '\\)']
+                        ]
+                    }
+                };
+            </script>
+        
+        <script type="text/javascript" id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+        </script>
+    
+
+    
+    
+
+
+    
+    
+        <link rel="stylesheet"
+              type="text/css"
+              href="https://christovis.github.io/theme/light.css" />
+        <link id="darkModeStyle"
+              rel="stylesheet"
+              type="text/css"
+              href="https://christovis.github.io/theme/dark.css" />
+    
+
+    <!-- Set the correct theme in the script -->
+
+    
+        <script src=https://christovis.github.io/js/themetoggle.js></script>
+
+        
+            <script>
+                setTheme(getSavedTheme());
+            </script>
+        
+    
+
+
+    <link rel="stylesheet"
+          type="text/css"
+          media="screen"
+          href="https://christovis.github.io/main.css" />
+
+    
+
+    </head>
+
+
+    <body>
+        <div class="left-content">
+            
+            
+        </div>
+
+        <div class="content">
+            <nav>
+    <div class="left-nav">
+        
+            <a href=https:&#x2F;&#x2F;christovis.github.io&#x2F;>#CB</a>
+        
+
+
+        <div class="socials">
+            
+                
+            
+            
+                <a rel=&#x27;me&#x27; href="https:&#x2F;&#x2F;github.com&#x2F;Christovis" class="social">
+                    <img alt="github"
+                         src="https://christovis.github.io/icons/social/github.svg" />
+                </a>
+            
+                <a rel=&#x27;me&#x27; href="https:&#x2F;&#x2F;mastodon.green&#x2F;@chrbecker@eupolicy.social" class="social">
+                    <img alt="mastodon"
+                         src="https://christovis.github.io/icons/social/mastodon.svg" />
+                </a>
+            
+                <a rel=&#x27;me&#x27; href="https:&#x2F;&#x2F;pixelfed.social&#x2F;i&#x2F;web&#x2F;profile&#x2F;789250781975312794" class="social">
+                    <img alt="pixelfed"
+                         src="https://christovis.github.io/icons/social/pixelfed.svg" />
+                </a>
+            
+        </div>
+    </div>
+
+    <div class="right-nav">
+        
+            <a href=https://christovis.github.io/software style="margin-right: 0.5em">&#x2F;software</a>
+        
+            <a href=https://christovis.github.io/talks style="margin-right: 0.5em">&#x2F;talks</a>
+        
+            <a href=https://christovis.github.io/posts style="margin-right: 0.5em">&#x2F;posts</a>
+        
+
+        
+
+        
+            <a id="dark-mode-toggle"
+               onclick="toggleTheme(); event.preventDefault();"
+               href="#">
+                <img src="https://christovis.github.io/icons/sun.svg" id="sun-icon" alt="Light" />
+                <img src="https://christovis.github.io/icons/moon.svg"
+                     id="moon-icon"
+                     style="filter: invert(1)"
+                     alt="Dark" />
+                <img src="https://christovis.github.io/icons/auto.svg"
+                     id="auto-icon"
+                     style="filter: invert(1)"
+                     alt="Auto" />
+            </a>
+
+            <!-- Initialize the theme toggle icons -->
+            <script>
+                updateItemToggleTheme()
+            </script>
+        
+    </div>
+</nav>
+
+
+            
+            
+    
+    <div class="visible-element-observer-root" data-selector="main article p">
+        <main>
+            <article>
+                <div class="title">
+                    
+                    
+    
+        <div class="page-header">
+            Accelerating Cosmic Simulations through Machine Learning
+        </div>
+    
+
+
+                    <div class="meta">
+                        
+                            Posted on <time>2021-01-07</time>
+                        
+
+
+                        
+
+                        
+
+                        
+
+                        
+                        
+
+                        
+                        
+
+                        
+                        
+
+                        
+
+                    </div>
+                </div>
+
+                
+
+                <section class="body">
+                    <p>In this years <a href="http://www.virgo.dur.ac.uk/">Virgo</a> meeting I have moderated the discussion on how machine learning can be used to accelerate simulations.</p>
+<p>My work, which is done in collaboration with Carolina L. Cuesta, was presented at the 2020 <a href="https://www.uibk.ac.at/congress/mockinnsbruck/">Mock conference</a> in Innsbruck.</p>
+<h3 id="abstract">Abstract</h3>
+<p>We use the state-of-the-art cosmological, magnetohydrodynamical IllustrisTNG (TNG) simulations to explore the galaxy-halo connection as inferred from gradient boosted decision trees (GBDT). With the large 300 Mpc (TNG300) volume, we establish the mean occupancy of central and satellite galaxies and their dependence on the properties of the dark matter haloes hosting them. 19 halo properties. Through the interpretable machine learning approach, we can achieve two things. Firstly, the generation of an optimal model to populate dark-matter only simulations with galaxies that reproduce the observed clustering. Secondly, understand what effect each of the 19 halo properties has on the physics of galaxy formation. Through bagging and boosting we find the optimal tree depth and obtain the uncertainties predicting for each halo.</p>
+<p><img src="https://christovis.github.io/assets/talk_gahaco_dendo_cm.png" alt="dendogram" /></p>
+<p><em>Left</em>: Dendogram of halo properties. <em>Right</em>: Correlation matrix. Halo properties with red boxes are chosen for the final model.</p>
+
+                </section>
+            </article>
+        </main>
+    </div>
+
+
+
+            
+                
+            
+
+            
+        </div>
+
+        <div class="right-content">
+            
+    
+    
+
+        </div>
+    </body>
+
+</html>

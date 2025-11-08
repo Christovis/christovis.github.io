@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en" class="dark light">
+
+    <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="base" content="https:&#x2F;&#x2F;christovis.github.io&#x2F;" />
+
+    
+
+    
+
+    
+    
+    
+        <title>
+            
+                Category Theory for Programmers - Part I
+            
+        </title>
+
+        
+            <meta property="og:title"
+                  content="Category Theory for Programmers - Part I" />
+        
+    
+
+    
+        
+            <meta property="og:description" content="This is an example description" />
+        
+    
+
+    
+        
+            <meta name="description" content="This is an example description" />
+        
+    
+
+    
+    
+        <link rel="icon"
+              type="image/png"
+              href="https://christovis.github.io/static/icons/favicon.ico" />
+    
+
+    
+    
+        <link href=https://christovis.github.io/fonts.css rel="stylesheet" />
+    
+
+    
+    
+        <link rel="stylesheet"
+              type="text/css"
+              href="/syntax-theme-dark.css"
+              media="(prefers-color-scheme: dark)" />
+        <link rel="stylesheet"
+              type="text/css"
+              href="/syntax-theme-light.css"
+              media="(prefers-color-scheme: light)" />
+    
+
+    
+    
+
+    
+    
+        <script defer src=https://christovis.github.io/js/codeblock.js></script>
+    
+
+    
+    
+
+    
+    
+
+    
+        
+            <script>
+                MathJax = {
+                    tex: {
+                        inlineMath: [
+                            ['$', '$'],
+                            ['\\(', '\\)']
+                        ]
+                    }
+                };
+            </script>
+        
+        <script type="text/javascript" id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+        </script>
+    
+
+    
+    
+
+
+    
+    
+        <link rel="stylesheet"
+              type="text/css"
+              href="https://christovis.github.io/theme/light.css" />
+        <link id="darkModeStyle"
+              rel="stylesheet"
+              type="text/css"
+              href="https://christovis.github.io/theme/dark.css" />
+    
+
+    <!-- Set the correct theme in the script -->
+
+    
+        <script src=https://christovis.github.io/js/themetoggle.js></script>
+
+        
+            <script>
+                setTheme(getSavedTheme());
+            </script>
+        
+    
+
+
+    <link rel="stylesheet"
+          type="text/css"
+          media="screen"
+          href="https://christovis.github.io/main.css" />
+
+    
+
+    </head>
+
+
+    <body>
+        <div class="left-content">
+            
+            
+        </div>
+
+        <div class="content">
+            <nav>
+    <div class="left-nav">
+        
+            <a href=https:&#x2F;&#x2F;christovis.github.io&#x2F;>#CB</a>
+        
+
+
+        <div class="socials">
+            
+                
+            
+            
+                <a rel=&#x27;me&#x27; href="https:&#x2F;&#x2F;github.com&#x2F;Christovis" class="social">
+                    <img alt="github"
+                         src="https://christovis.github.io/icons/social/github.svg" />
+                </a>
+            
+                <a rel=&#x27;me&#x27; href="https:&#x2F;&#x2F;mastodon.green&#x2F;@chrbecker@eupolicy.social" class="social">
+                    <img alt="mastodon"
+                         src="https://christovis.github.io/icons/social/mastodon.svg" />
+                </a>
+            
+                <a rel=&#x27;me&#x27; href="https:&#x2F;&#x2F;pixelfed.social&#x2F;i&#x2F;web&#x2F;profile&#x2F;789250781975312794" class="social">
+                    <img alt="pixelfed"
+                         src="https://christovis.github.io/icons/social/pixelfed.svg" />
+                </a>
+            
+        </div>
+    </div>
+
+    <div class="right-nav">
+        
+            <a href=https://christovis.github.io/software style="margin-right: 0.5em">&#x2F;software</a>
+        
+            <a href=https://christovis.github.io/talks style="margin-right: 0.5em">&#x2F;talks</a>
+        
+            <a href=https://christovis.github.io/posts style="margin-right: 0.5em">&#x2F;posts</a>
+        
+
+        
+
+        
+            <a id="dark-mode-toggle"
+               onclick="toggleTheme(); event.preventDefault();"
+               href="#">
+                <img src="https://christovis.github.io/icons/sun.svg" id="sun-icon" alt="Light" />
+                <img src="https://christovis.github.io/icons/moon.svg"
+                     id="moon-icon"
+                     style="filter: invert(1)"
+                     alt="Dark" />
+                <img src="https://christovis.github.io/icons/auto.svg"
+                     id="auto-icon"
+                     style="filter: invert(1)"
+                     alt="Auto" />
+            </a>
+
+            <!-- Initialize the theme toggle icons -->
+            <script>
+                updateItemToggleTheme()
+            </script>
+        
+    </div>
+</nav>
+
+
+            
+            
+    
+    <div class="visible-element-observer-root" data-selector="main article p">
+        <main>
+            <article>
+                <div class="title">
+                    
+                    
+    
+        <div class="page-header">
+            Category Theory for Programmers - Part I
+        </div>
+    
+
+
+                    <div class="meta">
+                        
+                            Posted on <time>2022-06-15</time>
+                        
+
+
+                        
+
+                        
+
+                        
+
+                        
+                        
+
+                        
+                        
+
+                        
+                        
+
+                        
+
+                    </div>
+                </div>
+
+                
+
+                <section class="body">
+                    <p>Complexity science, also referred to as systems thinking or systems science, is increasingly recognised as relevant paradigms for studying the way in which large groups of individual components behave collectively by adapting to each other and the environment they create themselves. In these complex systems, cause and effect are often distant in time and space, delaying noticeable consequences of actions, such that they are different from and less salient than their proximate effects. Such complex systems that escape our intuition can be found in all parts of society and we still lack the principled foundations needed to formalise these problems and derive possible answers.</p>
+<p>One novel avenue for addressing this concern is the emerging field of applied category theory (ACT), based on a mathematical language for defining and studying compositional systems, where complex entities are built up from smaller, simpler pieces. The earliest applications of category theory (CT) were in pure math, where it provided a common language for comparing algebraic and geometric structures. Later, in the 1970's and 80's, it became clear that the same mathematical structures devised to link algebra and geometry could be used to analyse physical, logical and computational systems as well. Today, CT is well-established across a broad range of pure mathematics, theoretical physics and computer science.</p>
+<p>In the last ten years the work done in ACT has expanded rapidly, touching on topics in aviation, chemistry, epidemiology, machine learning to name but a few. This institutes driving this development are especially the following:</p>
+<ul>
+<li><a href="https://cybercat.institute">Institute for Categorical Cybernetics</a></li>
+<li><a href="https://topos.site">Topos Institute</a></li>
+<li><a href="https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.1249.pdf">Workshop on Applied Category Theory: Bridging Theory and Practice</a> organised by the 'National Institute of Standards and Technology' (NIST)</li>
+</ul>
+<p>Being aware of this development has led me to study and learning applied category theory, using programming language theory as an introductory lens. To reflect on categorical structures on programming language design I use Haskell and in the future Python. My notes and solutions to challenges in the 'Category Theory for Programmers' by Bartosz Milewski can be found in the linked document. They are still a work in progress.</p>
+<blockquote>
+<p>Link to PDF <a href="https://github.com/Christovis/category-theory-for-programmers-companion/blob/main/docs/part1.pdf">here</a>.</p>
+</blockquote>
+
+                </section>
+            </article>
+        </main>
+    </div>
+
+
+
+            
+                
+            
+
+            
+        </div>
+
+        <div class="right-content">
+            
+    
+    
+
+        </div>
+    </body>
+
+</html>
