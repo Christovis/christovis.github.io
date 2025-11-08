@@ -1,4 +1,4 @@
-# test On every push this script is executed
+# On every push this script is executed
 on: push
 name: Build and deploy GH Pages
 jobs:
