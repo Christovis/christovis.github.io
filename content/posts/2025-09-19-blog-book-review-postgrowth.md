@@ -1,0 +1,10 @@
++++
+title = "Book Review - Post Growth; Life after Capitalism"
+date = "2025-09-19"
++++
+
+Lengthy reviews on this book have been published by [Geoff Mann](https://www.lrb.co.uk/the-paper/v44/n16/geoff-mann/reversing-the-freight-train) and [Oliver Eagleton](https://www.theguardian.com/books/2021/may/06/post-growth-by-tim-jackson-review-life-after-capitalism). I add my two cents here, as I didn't find them mentioned in other reviews. However, they are important for my own work and inquiries.
+
+In his book, Jackson draws on biographical stories to support his narrative. Two of them are exemplifying 'virtuous lifes' in a post-growth future. First, the life of Ellen MacArthur, who established a foundation dedicated to the pursuit of a more sustainable 'circular economy'. Jackson describes the goal of the Foundation as 'to adapt our vision of the economy to the constraints of the planet.' Unfortunately, he positions the 'circular economy' as a possible post-growth economic model, as it has green growth aspirations in its current form. While he has used the second law of thermodynamics to debunk capitalism, he doesn't seem to have thought about its implications for a 'circular economy'. The violation of physical laws is one of the common critiques of the circular economy, see e.g., [H. Corvellec et al. 2022](https://onlinelibrary.wiley.com/doi/10.1111/jiec.13187).
+
+Second, the 'Green Belt Movement' (GBM) set up by Wangarĩ Maathai in 1977. Through community led reforestation projects, GBM aims to empower woman, protect habitats, and counter carbon emissions through nature-based solutions. I similar approach (planting trees) for different ends is used by carbon emission trading schemes (CETS), of which first experiments date back to the late 1960s. CTES is supported by the UN and have been implemented by G20 nations. In that sense, this example of a 'virtuous lifes' has been deeply embedded in capitalism. Therefore, using it as a path towards a post-growth soceity will be difficult.
